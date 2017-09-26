@@ -25,7 +25,7 @@
 
                         </div>
 
-                        <div class="uk-navbar-right">
+                        <div class="uk-navbar-right uk-visible@m">
                             <ul class="uk-navbar-nav">
                                 <li class="uk-active"><a href="#aboutSection" style="color:#F8AA19">About</a></li>
                                 <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19">Showcase</a></li>
@@ -34,11 +34,34 @@
                                 <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19">Contact Us</a></li>
                             </ul>
                         </div>
+                        <!-- Mobile Navigation Toggle -->
+                        <div class="off-canvas-content">
+                            <div class="uk-navbar-right">
+                                <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav-primary"></a>
+                            </div>
+                        </div>
                     </nav>
+
 
                 </div>
                 <h2 class="uk-h1 uk-text-center uk-text-heading" style="color:#F8AA19">The Event Architect</h2>
                 <h2 class="uk-text-heading uk-h1 uk-text-center" style="color:#F8AA19">Yours Truly</h2>
+
+                <!-- Mobile Navigation -->
+                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                        <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-nav-center uk-margin-auto-vertical">
+                            <a class="uk-offcanvas-close" uk-close></a>
+                            <li class="uk-parent"><a href="#" style="color:#F8AA19">Home</a></li>
+                            <li class="uk-parent"><a href="#aboutSection" style="color:#F8AA19">About</a></li>
+                            <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19">Showcase</a></li>
+                            <li class="uk-parent"><a href="#servicesSection" style="color:#F8AA19">Services</a></li>
+                            <li class="uk-parent"><a href="#teamSection" style="color:#F8AA19">The Team</a></li>
+                            <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -125,7 +148,7 @@
             <ul uk-accordion="collapsible: false">
                 <li>
                     <h3 class="uk-accordion-title" style="font-size:25px">Katochi Poetry Recital; I am Diversity</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dd>Theatre production</dd>
                         <dd>DJ and Visual Support</dd>
                         <dd>300pax</dd>
@@ -136,22 +159,22 @@
                                         </a>
                             </div>
 
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: true">
                                 <a class="uk-inline" href="img/place2.jpg" caption="Caption 1">
                                             <img src="img/place2.jpg" alt="">
                                         </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: true">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
                                                 <img src="img/place3.jpg" alt="">
                                             </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: true">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
                                                     <img src="img/place4.jpg" alt="">
                                                 </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: true">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
                                                         <img src="img/place5.jpg" alt="">
                                                     </a>
@@ -162,7 +185,7 @@
                 </li>
                 <li>
                     <h3 class="uk-accordion-title" style=" font-size:25px">Dorm Room Inspirations Mixtape Launch</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dd>Concert</dd>
                         <dd>Event Management, Audio & Visual</dd>
                         <dd>200pax</dd>
@@ -199,7 +222,7 @@
                 </li>
                 <li>
                     <h3 class="uk-accordion-title" style=" font-size:25px">Makerere College School Mulawa Luncheon</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dt>Event Type: </dt>
                         <dd>School Prom</dd>
                         <dt>Services: </dt>
@@ -213,22 +236,22 @@
                                         </a>
                             </div>
 
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: true">
                                 <a class="uk-inline" href="img/place2.jpg" caption="Caption 1">
                                             <img src="img/place2.jpg" alt="">
                                         </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: true">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
                                                 <img src="img/place3.jpg" alt="">
                                             </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: true">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
                                                     <img src="img/place4.jpg" alt="">
                                                 </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: true">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
                                                         <img src="img/place5.jpg" alt="">
                                                     </a>
@@ -239,7 +262,7 @@
                 </li>
                 <li>
                     <h3 class="uk-accordion-title" style=" font-size:25px">Uganda Martyr’s Namugongo Prom</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dt>Event Type: </dt>
                         <dd>School Prom</dd>
                         <dt>Services: </dt>
@@ -253,22 +276,22 @@
                                         </a>
                             </div>
 
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: true">
                                 <a class="uk-inline" href="img/place2.jpg" caption="Caption 1">
                                             <img src="img/place2.jpg" alt="">
                                         </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: true">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
                                                 <img src="img/place3.jpg" alt="">
                                             </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: true">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
                                                     <img src="img/place4.jpg" alt="">
                                                 </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: true">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
                                                         <img src="img/place5.jpg" alt="">
                                                     </a>
@@ -279,7 +302,7 @@
                 </li>
                 <li>
                     <h3 class="uk-accordion-title" style=" font-size:25px">Night in the Stars Prom; Uganda Martyr’s Namugongo 2017</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dt>Event Type: </dt>
                         <dd>School Prom</dd>
                         <dt>Services: </dt>
@@ -293,22 +316,22 @@
                                         </a>
                             </div>
 
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: true">
                                 <a class="uk-inline" href="img/place2.jpg" caption="Caption 1">
                                             <img src="img/place2.jpg" alt="">
                                         </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: true">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
                                                 <img src="img/place3.jpg" alt="">
                                             </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: true">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
                                                     <img src="img/place4.jpg" alt="">
                                                 </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: true">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
                                                         <img src="img/place5.jpg" alt="">
                                                     </a>
@@ -319,7 +342,7 @@
                 </li>
                 <li>
                     <h3 class="uk-accordion-title" style=" font-size:25px">Writivism Festival 2017</h3>
-                    <div class="uk-accordion-content">
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: true">
                         <dt>Event Type: </dt>
                         <dd>Festival</dd>
                         <dt>Services: </dt>
@@ -333,22 +356,22 @@
                                         </a>
                             </div>
 
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: true">
                                 <a class="uk-inline" href="img/place2.jpg" caption="Caption 1">
                                             <img src="img/place2.jpg" alt="">
                                         </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: true">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
                                                 <img src="img/place3.jpg" alt="">
                                             </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: true">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
                                                     <img src="img/place4.jpg" alt="">
                                                 </a>
                             </div>
-                            <div>
+                            <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: true">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
                                                         <img src="img/place5.jpg" alt="">
                                                     </a>
@@ -380,7 +403,7 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Meetings, trainings, launches and retreats</p>
+                            <p class="uk-h4 uk-margin-remove">Meetings, Trainings, Launches <br>and Retreats</p>
                         </div>
                     </div>
                 </div>
@@ -388,7 +411,7 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Conferences, concerts,festivals and workshops</p>
+                            <p class="uk-h4 uk-margin-remove">Conferences, Concerts, Festivals <br>and Workshops</p>
                         </div>
                     </div>
                 </div>
@@ -396,7 +419,7 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Birthdays, Anniversaries, and holidays</p>
+                            <p class="uk-h4 uk-margin-remove">Birthdays, Anniversaries, and Holidays</p>
                         </div>
                     </div>
                 </div>
@@ -407,7 +430,7 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Weddings, Receptions, Homecoming, Thanksgivings and Bridal and baby showers</p>
+                            <p class="uk-h4 uk-margin-remove">Weddings, Receptions, Homecoming,<br>Thanksgivings and Bridal and Baby showers</p>
                         </div>
                     </div>
                 </div>
@@ -415,7 +438,7 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Company picnics, sports events, banquets, nights-out and award ceremonies</p>
+                            <p class="uk-h4 uk-margin-remove">Company picnics, Sports events, Banquets, <br>Nights-out and Award ceremonies</p>
                         </div>
                     </div>
                 </div>
@@ -671,12 +694,11 @@
 
                         <div class="uk-grid-small uk-grid-divider uk-child-width-1-1" uk-grid>
                             <div>
-                                <a href="https://twitter.com" class="uk-icon-link uk-margin-small-right" uk-icon="icon: twitter; ratio: 2"></a></div>
+                                <a href="https://www.facebook.com/eventarch/" class="uk-icon-link  uk-margin-small-right" uk-icon="icon: facebook; ratio: 2"
+                                    title="Like & Follow Us" uk-tooltip></a>The Event Architect</div>
                             <div>
-                                <a href="https://facebook.com" class="uk-icon-link  uk-margin-small-right" uk-icon="icon: facebook; ratio: 2" title="Like & Follow Us"
-                                    uk-tooltip></a>The Event Architect</div>
-                            <div>
-                                <a href="https://instagram.com" class="uk-icon-link" uk-icon="icon: instagram; ratio: 2"></a></div>
+                                <a href="https://www.instagram.com/theeventarchitect/" class="uk-icon-link" uk-icon="icon: instagram; ratio: 2"></a>The
+                                Event Architect</div>
                         </div>
 
                     </div>
@@ -688,20 +710,6 @@
         </div>
     </footer>
 </body>
-<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyAvhu4cQINyWz3hgUVquFAMQ5mmP3CTdEY",
-        authDomain: "the-event-architect-website.firebaseapp.com",
-        databaseURL: "https://the-event-architect-website.firebaseio.com",
-        projectId: "the-event-architect-website",
-        storageBucket: "",
-        messagingSenderId: "1008820367208"
-    };
-    firebase.initializeApp(config);
-</script>
-
 <!-- jQuery is required -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
