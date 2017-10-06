@@ -49,8 +49,8 @@
 
 
                 </div>
-                <h2 class="uk-h1 uk-text-center uk-text-heading" style="color:#F8AA19">The Event Architect</h2>
-                <h2 class="uk-text-heading uk-h1 uk-text-center" style="color:#F8AA19">Yours Truly</h2>
+                
+                <h2 class="uk-text-heading uk-h1 uk-text-center uk-visible@m" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:100px">Yours Truly</h2>
 
                 <!-- Mobile Navigation -->
                 <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
@@ -662,7 +662,8 @@
                     </div>
                 </div>
 
-                <a class="uk-button uk-button-primary uk-button-large" href="#" onsubmit="this.submit(); this.reset(); return false;" name="submitButton">Submit</a>
+                <input  class="uk-button uk-button-primary uk-button-large" 
+                onsubmit="this.submit(); this.reset(); return false;" type="submit" name="submitButton" value="Submit">
                 <!-- Need to work on the form submit either use the button or just simply implement a form anchor submit with JS, as well as clear the form and display a message on submit -->
                 <script type="text/javascript">
                     $('#contactForm').submit(function () {
