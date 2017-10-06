@@ -9,6 +9,7 @@
     We work to make sure that your event really speaks, Your's truly.">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto+Mono" rel="stylesheet">
     <title>The Event Architect</title>
 </head>
 
@@ -25,17 +26,17 @@
                                 <img  class ="uk-navbar-item uk-logo uk-border-circle" src="img/brand.jpg" alt="">
                             </a>
 
-                            <p class="uk-text-large" style="color:#F8AA19">The Event Architect</p>
+                            <p class="uk-text-large" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:30px">The Event Architect</p>
 
                         </div>
 
                         <div class="uk-navbar-right uk-visible@m">
                             <ul class="uk-navbar-nav">
-                                <li class="uk-active"><a href="#aboutSection" style="color:#F8AA19">About</a></li>
-                                <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19">Showcase</a></li>
-                                <li class="uk-parent"><a href="#servicesSection" style="color:#F8AA19">Services</a></li>
-                                <li class="uk-parent"><a href="#teamSection" style="color:#F8AA19">The Team</a></li>
-                                <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19">Contact Us</a></li>
+                                <li class="uk-active"><a href="#aboutSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">About</a></li>
+                                <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Showcase</a></li>
+                                <li class="uk-parent"><a href="#servicesSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Services</a></li>
+                                <li class="uk-parent"><a href="#teamSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">The Team</a></li>
+                                <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- Mobile Navigation Toggle -->
@@ -632,37 +633,43 @@
         <br>
         <p class="uk-text-center uk-text-large">Drop Us a line and we will get back to you ASAP...</p>
         <div class="uk-container">
-            <form class="uk-form-stacked uk-form-center" action="mailto:email@example.com" method="post">
+            <form class="uk-form-stacked uk-form-center" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Name</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="text" required>
+                        <input class="uk-input" id="form-stacked-text" type="text" name="name" required>
                     </div>
                 </div>
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Email</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="email" required>
+                        <input class="uk-input" id="form-stacked-text" type="email" name="email" required>
                     </div>
                 </div>
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Contact number</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="text">
+                        <input class="uk-input" id="form-stacked-text" type="text" name="number">
                     </div>
                 </div>
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-select">Your message</label>
                     <div class="uk-margin">
-                        <textarea class="uk-textarea" rows="5" placeholder="Talk to Us.." required></textarea>
+                        <textarea class="uk-textarea" rows="5" placeholder="Talk to Us.." name="message" required></textarea>
                     </div>
                 </div>
 
-                <a class="uk-button uk-button-primary uk-button-large" href="#" onsubmit="this.submit(); this.reset(); return false;">Submit</a>
+                <a class="uk-button uk-button-primary uk-button-large" href="#" onsubmit="this.submit(); this.reset(); return false;" name="submitButton">Submit</a>
                 <!-- Need to work on the form submit either use the button or just simply implement a form anchor submit with JS, as well as clear the form and display a message on submit -->
+                <script type="text/javascript">
+                    $('#contactForm').submit(function () {
+                        $.post("form_handler.php", $("#contactForm").serialize(), function (data) {});
+                        return false;
+                    });
+                </script>
             </form>
             <br>
         </div>
@@ -670,8 +677,9 @@
     <footer>
         <div class="uk-section-secondary">
             <div class="uk-container">
+                <br>
 
-                <h3>The Event Architect</h3>
+                <h3 style="font-family: 'Courgette', cursive; font-size:30px">The Event Architect</h3>
 
                 <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m" uk-grid>
                     <div>
@@ -699,12 +707,9 @@
                         <p class="uk-text-lead">Socialise with us</p>
 
                         <div class="uk-grid-small uk-grid-divider uk-child-width-1-1" uk-grid>
-                            <div>
-                                <a href="https://www.facebook.com/eventarch/" class="uk-icon-link  uk-margin-small-right" uk-icon="icon: facebook; ratio: 2"
-                                    title="Like & Follow Us" uk-tooltip></a>The Event Architect</div>
-                            <div>
-                                <a href="https://www.instagram.com/theeventarchitect/" class="uk-icon-link" uk-icon="icon: instagram; ratio: 2"></a>The
-                                Event Architect</div>
+                            <a href="https://www.facebook.com/eventarch/" class="uk-icon-link" uk-icon="icon: facebook; ratio: 2"></a>
+
+                            <a href="https://www.instagram.com/theeventarchitect/" class="uk-icon-link uk-margin-small-right" uk-icon="icon: instagram; ratio: 2"></a>
                         </div>
 
                     </div>
