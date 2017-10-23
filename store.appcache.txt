@@ -1,0 +1,24 @@
+CACHE MANIFEST
+#October-2017
+CACHE:
+index.html
+img/about-us.jpg
+img/brand.jpg
+img/contact-us.jpg
+img/team.jpg
+img/showcase.jpg
+img/services.jpg
+img/person1.jpg
+img/person2.jpg
+img/place1.jpg
+img/hero_image.jpg
+brand_icon.ico
+
+
+
+NETWORK:
+*
+
+
+
+

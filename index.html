@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="store.appcache">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Make your day an eventful success with the best event planning company in Uganda. 
-    We work to make sure that your event really speaks, Your's truly.">
+    <META NAME="subject" CONTENT="Event Planner">
+    <META NAME="Description" CONTENT="Make your day an eventful success with the best event planning company in Uganda. 
+        We do all the planning so that your event will just work">
+    <META NAME="Keywords" CONTENT="The Event Architect, Uganda, event planning uganda, event planner uganda, your's truly planner">
+    <META NAME="Language" CONTENT="English">
+    <META HTTP-EQUIV="Expires" CONTENT="Never">
+    <META NAME="Copyright" CONTENT="The Event Architect">
+    <META NAME="Designer" CONTENT="Jonathan Musiitwa">
+    <META NAME="Publisher" CONTENT="The Event Architect">
+    <META NAME="distribution" CONTENT="Global">
+    <META NAME="city" CONTENT="Kampala">
+    <META NAME="country" CONTENT="Uganda,Ug,UG">
+
+
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="brand_icon.ico" type="image/x-icon">
+
     <title>The Event Architect</title>
 </head>
 
 <body>
+    <!--Programatically checking for update to the app cache-->
+    <script>
+        function onUpdateReady() {
+            if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+                window.applicationCache.swapCache();
+                location.reload();
+            }
+        }
+        window.applicationCache.addEventListener('update is ready', onUpdateReady)
+    </script>
+
     <div class="uk-position-relative">
         <div class="uk-text-center">
 
             <img src="img/hero_image.jpg" alt="">
             <div class="uk-position-top">
                 <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-dark; top: 300">
-                    <nav class="uk-navbar-container" uk-navbar uk-scrollspy-nav="closest: li; scroll: true">
+                    <nav class="uk-navbar-container" uk-navbar uk-scrollspy-nav="closest: li; scroll: false">
                         <div class="uk-navbar-left">
                             <a class="uk-navbar-item uk-logo" href="#">
-                                <img  class ="uk-navbar-item uk-logo uk-border-circle" src="img/brand.jpg" alt="">
+                                <img class="uk-navbar-item uk-logo uk-border-circle" src="img/brand.jpg" alt="">
                             </a>
-
                             <p class="uk-text-large" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:30px">The Event Architect</p>
 
                         </div>
 
                         <div class="uk-navbar-right uk-visible@m">
                             <ul class="uk-navbar-nav">
-                                <li class="uk-active"><a href="#aboutSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">About</a></li>
-                                <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Showcase</a></li>
-                                <li class="uk-parent"><a href="#servicesSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Services</a></li>
-                                <li class="uk-parent"><a href="#teamSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">The Team</a></li>
-                                <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Contact Us</a></li>
+
+                                <li class="uk-active">
+                                    <a href="#aboutSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">About</a>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#showcaseSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Showcase</a>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#servicesSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Services</a>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#teamSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">The Team</a>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#contactSection" style="color:#F8AA19; font-family: 'Roboto Mono', monospace;">Contact Us</a>
+                                </li>
                             </ul>
                         </div>
                         <!-- Mobile Navigation Toggle -->
@@ -49,20 +88,31 @@
 
 
                 </div>
-                
                 <h2 class="uk-text-heading uk-h1 uk-text-center uk-visible@m" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:100px">Yours Truly</h2>
 
                 <!-- Mobile Navigation -->
-                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
                     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
                         <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-nav-center uk-margin-auto-vertical">
                             <a class="uk-offcanvas-close" uk-close></a>
-                            <li class="uk-parent"><a href="#" style="color:#F8AA19">Home</a></li>
-                            <li class="uk-parent"><a href="#aboutSection" style="color:#F8AA19">About</a></li>
-                            <li class="uk-parent"><a href="#showcaseSection" style="color:#F8AA19">Showcase</a></li>
-                            <li class="uk-parent"><a href="#servicesSection" style="color:#F8AA19">Services</a></li>
-                            <li class="uk-parent"><a href="#teamSection" style="color:#F8AA19">The Team</a></li>
-                            <li class="uk-parent"><a href="#contactSection" style="color:#F8AA19">Contact Us</a></li>
+                            <li class="uk-parent">
+                                <a href="#" style="color:#F8AA19">Home</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#aboutSection" style="color:#F8AA19">About</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#showcaseSection" style="color:#F8AA19">Showcase</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#servicesSection" style="color:#F8AA19">Services</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#teamSection" style="color:#F8AA19">The Team</a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="#contactSection" style="color:#F8AA19">Contact Us</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -87,9 +137,29 @@
                 <dd style="font-size:17px">The Event Architect is a Ugandan based company that started its genesis in the fall of 2015. Fueled by enthusiastic
                     youth it aims to create the best and most sought after events agency in the industry.</dd>
                 <dt></dt>
+                <!--Overview Section-->
+                <div class="uk-child-width-1-3 uk-grid-small uk-text-center uk-section-muted" uk-grid>
+                    <div>
+                        <div>
+                            <p class="uk-accordion-content">Projects Completed</p>
+                            <p class="uk-text-large uk-text-bold" style=" font-size:3em">15+</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p class="uk-accordion-content">Clients Served</p>
+                            <p class="uk-text-large uk-text-bold" style=" font-size:3em">20+</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="uk-accordion-content">Years of Service</p>
+                        <p class="uk-text-large uk-text-bold" style=" font-size:3em">5</p>
+                    </div>
+                </div>
+                <dt></dt>
             </dl>
             <!--About Accordian-->
-            <ul uk-accordion="collapsible: false">
+            <ul uk-accordion>
                 <li>
                     <h3 class="uk-accordion-title" style="font-size:25px">Our Mission</h3>
                     <div class="uk-accordion-content" style="font-size:18px">
@@ -150,236 +220,241 @@
         <div class="uk-container">
 
             <!--Showcase Accordian-->
-            <ul uk-accordion="collapsible: false">
+            <ul uk-accordion>
                 <li>
-                    <h3 class="uk-accordion-title" style="font-size:25px">Katochi Poetry Recital; I am Diversity</h3>
-                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
-                        <dd>Theatre production</dd>
-                        <dd>DJ and Visual Support</dd>
-                        <dd>300pax</dd>
+                    <h3 class="uk-accordion-title uk-text-bold" style="font-size:25px">Hope's Baby Shower</h3>
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div; delay: 500; repeat: false">
+                        <dt>Event Type:</dt>
+                        <dd>Baby Shower</dd>
+                        <dt>Services:</dt>
+                        <dd>Decor and Design</dd>
+                        <dt>Persons:</dt>
+                        <dd>12pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
-                                <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                <a class="uk-inline" href="bshower/bshower1.jpg">
+                                    <img src="bshower/bshower1.jpg" alt="">
+                                </a>
                             </div>
-
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: false">
-                                <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                <a class="uk-inline" href="bshower/bshower2.jpg">
+                                    <img src="bshower/bshower2.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: false">
-                                <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                <a class="uk-inline" href="bshower/bshower3.jpg">
+                                    <img src="bshower/bshower3.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: false">
-                                <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                <a class="uk-inline" href="bshower/bshower4.jpg">
+                                    <img src="bshower/bshower4.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: false">
-                                <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                <a class="uk-inline" href="bshower/bshower5.jpg">
+                                    <img src="bshower/bshower5.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    <h3 class="uk-accordion-title" style=" font-size:25px">Dorm Room Inspirations Mixtape Launch</h3>
-                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
-                        <dd>Concert</dd>
-                        <dd>Event Management, Audio & Visual</dd>
-                        <dd>200pax</dd>
+                    <h3 class="uk-accordion-title uk-text-bold" style=" font-size:25px">50th Wedding Anniversary</h3>
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div; delay: 500; repeat: false">
+                        <dt>Event Type:</dt>
+                        <dd>Wedding Anniversary</dd>
+                        <dt>Services:</dt>
+                        <dd>Event Management, Audio &amp; Visual</dd>
+                        <dt>Persons:</dt>
+                        <dd>400pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
-                                <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                <a class="uk-inline" href="golden/golden3.jpg" caption="Caption 1">
+                                    <img src="golden/golden3.jpg" alt="">
+                                </a>
                             </div>
 
                             <div>
-                                <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                <a class="uk-inline" href="golden/golden5.jpg" caption="Caption 1">
+                                    <img src="golden/golden5.jpg" alt="">
+                                </a>
                             </div>
                             <div>
-                                <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                <a class="uk-inline" href="golden/golden9.jpg" caption="Caption 1">
+                                    <img src="golden/golden9.jpg" alt="">
+                                </a>
                             </div>
                             <div>
-                                <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                <a class="uk-inline" href="golden/golden8.jpg" caption="Caption 1">
+                                    <img src="golden/golden8.jpg" alt="">
+                                </a>
                             </div>
                             <div>
-                                <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                <a class="uk-inline" href="golden/golden10.jpg" caption="Caption 1">
+                                    <img src="golden/golden10.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    <h3 class="uk-accordion-title" style=" font-size:25px">Makerere College School Mulawa Luncheon</h3>
-                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
-                        <dt>Event Type: </dt>
+                    <h3 class="uk-accordion-title uk-text-bold" style=" font-size:25px">Makerere College School Mulawa Luncheon</h3>
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div; delay: 500; repeat: false">
+                        <dt>Event Type:</dt>
                         <dd>School Prom</dd>
                         <dt>Services: </dt>
-                        <dd>Décor and Design, Event Management, Lighting</dd>
+                        <dd>Décor &amp; Design, Event Management, Lighting</dd>
                         <dt>Persons: </dt>
                         <dd>100pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
 
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: false">
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: false">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                    <img src="img/place3.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: false">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                    <img src="img/place4.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: false">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                    <img src="img/place5.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    <h3 class="uk-accordion-title" style=" font-size:25px">Uganda Martyr’s Namugongo Prom</h3>
-                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
+                    <h3 class="uk-accordion-title uk-text-bold" style=" font-size:25px">Uganda Martyr’s Namugongo Prom</h3>
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div; delay: 500; repeat: false">
                         <dt>Event Type: </dt>
                         <dd>School Prom</dd>
-                        <dt>Services: </dt>
-                        <dd>Décor and Design, Event Management</dd>
+                        <dt>Services:</dt>
+                        <dd>Décor &amp; Design, Event Management</dd>
                         <dt>Persons: </dt>
                         <dd>400pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
 
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: false">
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: false">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                    <img src="img/place3.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: false">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                    <img src="img/place4.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: false">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                    <img src="img/place5.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    <h3 class="uk-accordion-title" style=" font-size:25px">Night in the Stars Prom; Uganda Martyr’s Namugongo 2017</h3>
-                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
-                        <dt>Event Type: </dt>
+                    <h3 class="uk-accordion-title uk-text-bold" style=" font-size:25px">Night in the Stars Prom; Uganda Martyr’s Namugongo 2017</h3>
+                    <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom-medium; target: > div; delay: 500; repeat: false">
+                        <dt>Event Type:</dt>
                         <dd>School Prom</dd>
-                        <dt>Services: </dt>
-                        <dd>Décor and Design, Event Management, Lighting</dd>
-                        <dt>Persons: </dt>
+                        <dt>Services:</dt>
+                        <dd>Décor &amp; Design, Event Management, Lighting</dd>
+                        <dt>Persons:</dt>
                         <dd>100pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
 
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: false">
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: false">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                    <img src="img/place3.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: false">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                    <img src="img/place4.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: false">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                    <img src="img/place5.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    <h3 class="uk-accordion-title" style=" font-size:25px">Writivism Festival 2017</h3>
+                    <h3 class="uk-accordion-title uk-text-bold" style=" font-size:25px">Writivism Festival 2017</h3>
                     <div class="uk-accordion-content" uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 500; repeat: false">
-                        <dt>Event Type: </dt>
+                        <dt>Event Type:</dt>
                         <dd>Festival</dd>
-                        <dt>Services: </dt>
+                        <dt>Services:</dt>
                         <dd>Event Management</dd>
-                        <dt>Persons: </dt>
+                        <dt>Persons:</dt>
                         <dd>100pax</dd>
                         <div class="uk-child-width-1-5@m" uk-grid uk-lightbox="animation: slide">
                             <div>
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
 
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 600; repeat: false">
                                 <a class="uk-inline" href="img/place1.jpg" caption="Caption 1">
-                                            <img src="img/place1.jpg" alt="">
-                                        </a>
+                                    <img src="img/place1.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 700; repeat: false">
                                 <a class="uk-inline" href="img/place3.jpg" caption="Caption 1">
-                                                <img src="img/place3.jpg" alt="">
-                                            </a>
+                                    <img src="img/place3.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 800; repeat: false">
                                 <a class="uk-inline" href="img/place4.jpg" caption="Caption 1">
-                                                    <img src="img/place4.jpg" alt="">
-                                                </a>
+                                    <img src="img/place4.jpg" alt="">
+                                </a>
                             </div>
                             <div uk-grid uk-scrollspy="cls: uk-animation-slide-left-medium; target: > div; delay: 900; repeat: false">
                                 <a class="uk-inline" href="img/place5.jpg" caption="Caption 1">
-                                                        <img src="img/place5.jpg" alt="">
-                                                    </a>
+                                    <img src="img/place5.jpg" alt="">
+                                </a>
                             </div>
 
                         </div>
@@ -408,7 +483,8 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Meetings, Trainings, Launches and <br> Retreats</p>
+                            <p class="uk-h4 uk-margin-remove">Meetings, Trainings, Launches and
+                                <br> Retreats</p>
                         </div>
                     </div>
                 </div>
@@ -416,7 +492,8 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Conferences, Concerts, Festivals and<br> Workshops</p>
+                            <p class="uk-h4 uk-margin-remove">Conferences, Concerts, Festivals and
+                                <br> Workshops</p>
                         </div>
                     </div>
                 </div>
@@ -435,7 +512,8 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Weddings, Receptions, Homecoming,<br>Thanksgivings and Bridal and Baby showers</p>
+                            <p class="uk-h4 uk-margin-remove">Weddings, Receptions, Homecoming,
+                                <br>Thanksgivings and Bridal and Baby showers</p>
                         </div>
                     </div>
                 </div>
@@ -443,7 +521,8 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/place1.jpg" alt="">
                         <div class="uk-transition-slide-right-medium uk-position-right uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Company picnics, Sports events, Banquets, <br>Nights-out and Award ceremonies</p>
+                            <p class="uk-h4 uk-margin-remove">Company picnics, Sports events, Banquets,
+                                <br>Nights-out and Award ceremonies</p>
                         </div>
                     </div>
                 </div>
@@ -461,7 +540,7 @@
             <div class="uk-h3">Our Packages</div>
             <hr>
             <!--Services Accordian-->
-            <ul uk-accordion="collapsible: false">
+            <ul uk-accordion>
                 <li>
                     <h3 class="uk-accordion-title" style="font-size:25px">Audio, Visual Division and Equipment</h3>
                     <div class="uk-accordion-content">
@@ -558,7 +637,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Managing Director</p>
-                    <p class="uk-margin-small-top" style="color:#f0506e"><i>"DJ Irakoze"</i></p>
+                    <p class="uk-margin-small-top" style="color:#f0506e">
+                        <i>"DJ Irakoze"</i>
+                    </p>
                 </div>
                 <div class="uk-text-center">
                     <div class="uk-inline-clip uk-transition-toggle">
@@ -568,7 +649,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Media Executive</p>
-                    <p class="uk-margin-small" style="color:#f0506e"><i>"Tsubie"</i></p>
+                    <p class="uk-margin-small" style="color:#f0506e">
+                        <i>"Tsubie"</i>
+                    </p>
                 </div>
 
                 <div class="uk-text-center">
@@ -579,7 +662,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Financial Manager</p>
-                    <p class="uk-margin-small" style="color:#f0506e"><i>"Brian"</i></p>
+                    <p class="uk-margin-small" style="color:#f0506e">
+                        <i>"Brian"</i>
+                    </p>
                 </div>
             </div>
             <!--Second Row of team members-->
@@ -592,7 +677,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Public and Client Relations</p>
-                    <p class="uk-margin-small" style="color:#f0506e"><i>"Tipsy"</i></p>
+                    <p class="uk-margin-small" style="color:#f0506e">
+                        <i>"Tipsy"</i>
+                    </p>
                 </div>
                 <div class="uk-text-center">
                     <div class="uk-inline-clip uk-transition-toggle">
@@ -602,7 +689,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Accounts and Logistics</p>
-                    <p class="uk-margin-small" style="color:#f0506e"><i>"Brio656"</i></p>
+                    <p class="uk-margin-small" style="color:#f0506e">
+                        <i>"Brio656"</i>
+                    </p>
                 </div>
 
                 <div class="uk-text-center">
@@ -613,7 +702,9 @@
                         </div>
                     </div>
                     <p class="uk-margin-small-top">Creative Lead</p>
-                    <p class="uk-margin-small" style="color:#f0506e"><i>"Teo"</i></p>
+                    <p class="uk-margin-small" style="color:#f0506e">
+                        <i>"Teo"</i>
+                    </p>
                 </div>
             </div>
         </div>
@@ -633,37 +724,38 @@
         <br>
         <p class="uk-text-center uk-text-large">Drop Us a line and we will get back to you ASAP...</p>
         <div class="uk-container">
-            <form class="uk-form-stacked uk-form-center" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+
+            <form id="contactForm" class="uk-form-stacked uk-margin-left" action="<?= htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Name</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="text" name="name" required>
+                        <input class="uk-input" id="form-stacked-text" type="text" name="Name" required tabindex="1" autofocus>
                     </div>
                 </div>
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Email</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="email" name="email" required>
+                        <input class="uk-input" id="form-stacked-text" type="email" name="Email" tabindex="2" required>
                     </div>
                 </div>
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Contact number</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="text" name="number">
+                        <input class="uk-input" id="form-stacked-text" type="text" name="number" tabindex="3" required>
                     </div>
                 </div>
 
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-select">Your message</label>
                     <div class="uk-margin">
-                        <textarea class="uk-textarea" rows="5" placeholder="Talk to Us.." name="message" required></textarea>
+                        <textarea class="uk-textarea" rows="5" placeholder="Talk to Us.." name="Message" tabindex="4" required></textarea>
                     </div>
                 </div>
 
-                <input  class="uk-button uk-button-primary uk-button-large" 
-                onsubmit="this.submit(); this.reset(); return false;" type="submit" name="submitButton" value="Submit">
+                <input class="uk-button uk-button-primary uk-button-large" onsubmit="this.submit(); this.reset(); return false;" type="submit"
+                    name="submitButton" value="Submit">
                 <!-- Need to work on the form submit either use the button or just simply implement a form anchor submit with JS, as well as clear the form and display a message on submit -->
                 <script type="text/javascript">
                     $('#contactForm').submit(function () {
@@ -672,55 +764,145 @@
                     });
                 </script>
             </form>
-            <br>
+
+
         </div>
+        <br>
     </div>
-    <footer>
-        <div class="uk-section-secondary">
-            <div class="uk-container">
-                <br>
-
-                <h3 style="font-family: 'Courgette', cursive; font-size:30px">The Event Architect</h3>
-
-                <div class="uk-grid-match uk-grid-small uk-child-width-1-2@m" uk-grid>
+    <!--trial footer
+    <div class="uk-container-expand uk-text-centered">
+            <div class="uk-child-width-1-2 uk-grid-small" uk-grid style="background-color: #6351ce;">
                     <div>
-                        <p class="uk-text-lead">Address</p>
-
-                        <div class="uk-grid-small uk-child-width-1-1" uk-grid>
-                            <div>
-                                <span class="uk-icon-link uk-margin-small-left" uk-icon="icon: location; ratio: 2"></span>
-                                <span>&nbsp;&nbsp;&nbsp;P.O BOX: 8307
-                                         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kampala, 
-                                             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uganda.</span>
-                            </div>
-                            <div>
-                                <span class="uk-icon-link uk-margin-small-left" uk-icon="icon: mail; ratio: 2"></span>
-                                <a style="text-decoration: none">&nbsp;&nbsp;&nbsp;theeventarchitectug@gmail.com</a>
-                            </div>
-                            <div>
-                                <span class="uk-icon-link uk-margin-small-left" uk-icon="icon: phone; ratio: 2"></span>
-                                <span>&nbsp;&nbsp;&nbsp;+256778870358 
-                                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+256701159168</span></div>
-                        </div>
-
+                        <p>Connect with us on the socials</p>
                     </div>
-                    <div>
-                        <p class="uk-text-lead">Socialise with us</p>
-
-                        <div class="uk-grid-small uk-grid-divider uk-child-width-1-1" uk-grid>
-                            <a href="https://www.facebook.com/eventarch/" class="uk-icon-link" uk-icon="icon: facebook; ratio: 2"></a>
-
-                            <a href="https://www.instagram.com/theeventarchitect/" class="uk-icon-link uk-margin-small-right" uk-icon="icon: instagram; ratio: 2"></a>
-                        </div>
-
+                    <div class="uk-navbar-right">
+                            <ul class="uk-iconnav">
+                                    <li><a href="#" uk-icon="icon: facebook"></a></li>
+                                    <li><a href="#" uk-icon="icon: twitter"></a></li>
+                                    <li><a href="#" uk-icon="icon: whatsapp"></a></li>
+                                    <li><a href="#" uk-icon="icon: instagram"></a></li>
+                                </ul>
+            
                     </div>
+            
                 </div>
-                <p class="uk-text-center">Website created and designed for <span class="uk-text-bold">The Event Architect &copy;</span> by <a class="uk-text-primary"
-                        href="mailto:jonamusiitwa@gmail.com" title="jonamusiitwa@gmail.com" uk-tooltip>Jonathan Thomas Musiitwa</a></p>
-                <p class="uk-text-center uk-text-primary uk-text-meta">2017</p>
+    </div>-->
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only unique-color-dark pt-0">
+        <div style="background-color: #6351ce;">
+            <div class="container">
+                <!--Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!--Facebook-->
+                        <a href="https://www.facebook.com/eventarch/" class="icons-sm fb-ic ml-0">
+                            <i class="fa fa-facebook white-text mr-lg-4"> </i>
+                        </a>
+                        <!--Twitter-->
+                        <a class="icons-sm tw-ic">
+                            <i class="fa fa-twitter white-text mr-lg-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a href="https://www.instagram.com/theeventarchitect/" class="icons-sm ins-ic">
+                            <i class="fa fa-instagram white-text mr-lg-4"> </i>
+                        </a>
+                        <!--Snapchat-->
+                        <a class="icons-sm li-ic">
+                            <i class="fa fa-snapchat white-text mr-lg-4"> </i>
+                        </a>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
             </div>
         </div>
+
+
+        <!--Footer Links-->
+        <div class="container mt-5 mb-3 text-center text-md-left">
+            <div class="row mt-3">
+
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+
+                    <h3 class="title font-bold" style="font-family: 'Courgette', cursive; font-size:30px">
+                        <strong>The Event Architect</strong>
+                    </h3>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p> </p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
+                    <!-- <h6 class="title font-bold">
+                        <strong>Products</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!">Bootstrap Angular</a>
+                    </p>-->
+                </div>
+                <!--/.Second column-->
+
+
+
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="title font-bold">
+                        <strong>Contact</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> P.O BOX: 8307, Kampala, Uganda</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i>
+                        <a href="mailto:theeventarchitectug@gmail.com">theeventarchitectug@gmail.com </a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 256 7788 70358</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 256 7011 59168</p>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <!-- Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">Website for
+                <strong>The Event Architect</strong>
+                © 2017 by
+                <a href="mailto:jonamusiitwa@gmail.com" title="jonamusiitwa@gmail.com">
+                    <strong> Jonathan Thomas Musiitwa</strong>
+                </a>
+            </div>
+        </div>
+        <!--/.Copyright -->
+
     </footer>
+
 </body>
 <!-- jQuery is required -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
