@@ -20,7 +20,7 @@
 
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.34/css/uikit.min.css" />
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto+Mono" rel="stylesheet">
 
@@ -52,7 +52,7 @@
                             <a class="uk-navbar-item uk-logo" href="#">
                                 <img class="uk-navbar-item uk-logo uk-border-circle" src="img/brand.jpg" alt="">
                             </a>
-                            <p class="uk-text-large" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:30px">The Event Architect</p>
+                            <p class="uk-text-large uk-hidden@s" style="color:#F8AA19; font-family: 'Courgette', cursive; font-size:30px">The Event Architect</p>
 
                         </div>
 
@@ -78,7 +78,7 @@
                         </div>
                         <!-- Mobile Navigation Toggle -->
                         <div class="off-canvas-content">
-                            <div class="uk-navbar-right">
+                            <div class="uk-navbar-right uk-position-right">
                                 <a class="uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav-primary"></a>
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                 <p class="uk-text-center uk-visible@m uk-h2" style="color:#F8AA19; font-size:80px; font-family:'Courgette', cursive">Your Experience Agency </p>
 
                 <!-- Mobile Navigation -->
-                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: false">
+                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: false; flip: true">
                     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
                         <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-nav-center uk-margin-auto-vertical">
                             <a class="uk-offcanvas-close" uk-close></a>
@@ -145,19 +145,19 @@
 
                 <dt></dt>
                 <!--Overview Section-->
-                <div class="uk-child-width-1-3 uk-grid-small uk-text-center uk-section-muted" uk-grid>
+                <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-small uk-text-center uk-section-muted" uk-grid>
+
                     <div>
-                        <div>
-                            <p class="uk-accordion-content">Projects Completed</p>
-                            <p class="uk-text-large uk-text-bold" style=" font-size:3em">12+</p>
-                        </div>
+                        <p class="uk-accordion-content">Projects Completed</p>
+                        <p class="uk-text-large uk-text-bold" style=" font-size:3em">12+</p>
                     </div>
+
+
                     <div>
-                        <div>
-                            <p class="uk-accordion-content">Clients Served</p>
-                            <p class="uk-text-large uk-text-bold" style=" font-size:3em">2000+</p>
-                        </div>
+                        <p class="uk-accordion-content">Clients Served</p>
+                        <p class="uk-text-large uk-text-bold" style=" font-size:3em">2000+</p>
                     </div>
+
                     <div>
                         <p class="uk-accordion-content">Years of Service</p>
                         <p class="uk-text-large uk-text-bold" style=" font-size:3em">2</p>
@@ -472,12 +472,12 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="team/team1.jpg" alt="Arnold Magyezi-Managing Director">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Arnold Magyezi</p>
+                            <p class="uk-h4 uk-margin-remove">"DJ Irakoze"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Managing Director</p>
-                    <p class="uk-margin-small-top" style="color:#f0506e">
-                        <i>"DJ Irakoze"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Arnold Magyezi</p>
+                    <p class="uk-margin-small-top uk-text-small" style="color:#f0506e">
+                        <i>Managing Director</i>
                     </p>
                 </div>
 
@@ -486,12 +486,12 @@
                         <img class="uk-border-rounded" src="https://scontent.fkul10-1.fna.fbcdn.net/v/t1.0-9/19105973_1284392555015854_3581243679045728301_n.jpg?oh=797526d3c8e5aaeae96dd1cbaec7808a&oe=5A9E2A63"
                             alt="Patricia Tusuubira-Media Executive">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Patricia Tusuubira</p>
+                            <p class="uk-h4 uk-margin-remove">"Tsubie"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Media Executive</p>
-                    <p class="uk-margin-small" style="color:#f0506e">
-                        <i>"Tsubie"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Patricia Tusuubirae</p>
+                    <p class="uk-margin-small-top uk-text-small" style="color:#f0506e">
+                        <i>Media Executive</i>
                     </p>
                 </div>
 
@@ -499,12 +499,12 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="team/team3.jpg" alt="Jonathan Kisukye-Financial Manager">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Jonathan Kisukye</p>
+                            <p class="uk-h4 uk-margin-remove">"Brian"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Financial Manager</p>
-                    <p class="uk-margin-small" style="color:#f0506e">
-                        <i>"Brian"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Jonathan Kisukye</p>
+                    <p class="uk-margin-small uk-text-small" style="color:#f0506e">
+                        <i>Financial Manager</i>
                     </p>
                 </div>
             </div>
@@ -514,12 +514,12 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="team/team5.jpg" alt="Ivy Chimulwa-Public and Client Relations">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Ivy Chimulwa</p>
+                            <p class="uk-h4 uk-margin-remove">"Tipsy"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Public and Client Relations</p>
-                    <p class="uk-margin-small" style="color:#f0506e">
-                        <i>"Tipsy"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Ivy Chimulwa</p>
+                    <p class="uk-margin-small uk-text-small" style="color:#f0506e">
+                        <i>Public and Client Relations</i>
                     </p>
                 </div>
                 <div class="uk-text-center">
@@ -527,12 +527,12 @@
                         <img class="uk-border-rounded" src="https://scontent.fkul10-1.fna.fbcdn.net/v/t1.0-9/11128689_857963070940940_3269061755848398946_n.jpg?oh=ba562b2f032735faf55611c35d76d2ff&oe=5A9E4E4A"
                             alt="Brian Tamale-Accounts and Logistics">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Brian Tamale</p>
+                            <p class="uk-h4 uk-margin-remove">"Brio656"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Accounts and Logistics</p>
-                    <p class="uk-margin-small" style="color:#f0506e">
-                        <i>"Brio656"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Brian Tamale</p>
+                    <p class="uk-margin-small uk-text-small" style="color:#f0506e">
+                        <i>Accounts and Logistics</i>
                     </p>
                 </div>
 
@@ -540,12 +540,12 @@
                     <div class="uk-inline-clip uk-transition-toggle">
                         <img class="uk-border-rounded" src="img/person1.jpg" alt="Rachel Tendo- Creative Lead">
                         <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-default">
-                            <p class="uk-h4 uk-margin-remove">Racheal Tendo</p>
+                            <p class="uk-h4 uk-margin-remove">"Teo"</p>
                         </div>
                     </div>
-                    <p class="uk-margin-small-top">Creative Lead</p>
-                    <p class="uk-margin-small" style="color:#f0506e">
-                        <i>"Teo"</i>
+                    <p class="uk-margin-small-top uk-text-lead">Racheal Tendo</p>
+                    <p class="uk-margin-small uk-text-small" style="color:#f0506e">
+                        <i>Creative Lead</i>
                     </p>
                 </div>
             </div>
@@ -576,7 +576,7 @@
                 <div class="uk-width-1-2@s">
                     <label class="uk-form-label uk-text-large" for="form-stacked-text">Name</label>
                     <div class="uk-form-controls">
-                        <input class="uk-input" id="form-stacked-text" type="text" name="Name" required tabindex="1" autofocus>
+                        <input class="uk-input" id="form-stacked-text" type="text" name="Name" required tabindex="1">
                     </div>
                 </div>
 
@@ -602,13 +602,13 @@
 
                 <input class="uk-button uk-button-primary uk-button-large" onsubmit="this.submit(); this.reset(); return false;" type="submit"
                     name="submitButton" value="Submit">
-                <!-- Need to work on the form submit either use the button or just simply implement a form anchor submit with JS, as well as clear the form and display a message on submit -->
+                <!-- Need to work on the form submit either use the button or just simply implement a form anchor submit with JS, as well as clear the form and display a message on submit 
                 <script type="text/javascript">
                     $('#contactForm').submit(function () {
                         $.post("form_handler.php", $("#contactForm").serialize(), function (data) {});
                         return false;
                     });
-                </script>
+                </script>-->
             </form>
             <!--OnSubmit Message-->
 
@@ -661,7 +661,7 @@
         <div class="uk-section uk-section-secondary uk-light">
             <div class="uk-container uk-container-expand">
                 <div class="uk-grid-medium" uk-grid>
-                    <div class="uk-width-1-2">
+                    <div class="uk-width-1-2@m uk-width-1-1@s">
                         <h3 class="uk-text-large uk-text-bold" style="font-family: 'Courgette', cursive; font-size:40px">
                             <strong>The Event Architect</strong>
                         </h3>
@@ -673,11 +673,12 @@
                         </p>
 
                     </div>
-                    <div class="uk-width-1-4">
+                    <div class="uk-width-1-2@m uk-width-1-1@s">
                         <h3 class="uk-text-bold uk-text-large">
                             <strong>Contact</strong>
+                            <hr>
                         </h3>
-                        <hr>
+
                         <p>
                             <span uk-icon="icon: location; ratio:1.2"></span>&nbsp;&nbsp; P.O BOX: 8307, Kampala, Uganda</p>
                         <p>
@@ -719,8 +720,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.34/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.34/js/uikit-icons.min.js"></script>
 
 </body>
 
