@@ -1,0 +1,12 @@
+AddType text/cache-manifest .appcache
+
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^eventarch.azurewebsites.net[nc]
+RewriteRule ^(.*)$ http://www.eventarch.azurewebsites.net/$1 [r=301,nc]
+
+//Caching schema
+<FilesMatch "\.(jpg|ico|png|jpeg)$">
+Header set Cache-Control "public, max-age=5184000"
+</FilesMatch>
